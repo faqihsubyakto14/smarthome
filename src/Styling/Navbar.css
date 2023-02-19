@@ -1,0 +1,136 @@
+nav {
+  width: 100vw;
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.window-scroll {
+  background: var(--color-primary);
+  border-bottom: 1px solid var(--color-white);
+  box-shadow: 0 1rem 1rem var(--color-primary-variant);
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  display: none;
+}
+
+.nav__items {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav__signup-signup {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav__logo h3 {
+  font-size: 1.7rem !important;
+}
+
+/* Responsive Design Navbar */
+@media screen and (max-width: 1024px) {
+  /* ================ Navbar ============== */
+  nav {
+    background: var(--color-primary);
+  }
+
+  .nav__container {
+    position: relative;
+    width: 100vw !important;
+  }
+
+  .nav__logo {
+    margin-left: 2rem;
+    left: 0;
+    position: relative;
+    transform: translate(0);
+  }
+
+  .nav__items {
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    background: var(--color-white);
+    height: max-content;
+    width: 18rem;
+    box-shadow: -2rem 2rem 3rem rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    gap: 0;
+    z-index: 3;
+    display: none;
+  }
+  .nav__items li {
+    width: 100%;
+    height: 6rem;
+  }
+
+  .nav__items li a {
+    color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    transition: all 400ms ease !important;
+  }
+
+  .nav__items li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  .nav__signup-signup {
+    display: none;
+  }
+
+  nav button {
+    display: inline-block;
+    margin-right: 1.4rem;
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  nav button#close-btn {
+    display: none;
+  }
+
+  nav button i {
+    font-size: 2.4rem;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav__logo {
+    margin-left: 1rem;
+  }
+
+  .nav__items li a {
+    justify-content: center;
+    padding: 0;
+  }
+  nav button {
+    margin-right: 1.7rem !important;
+  }
+}

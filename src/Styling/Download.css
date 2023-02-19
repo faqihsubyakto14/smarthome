@@ -1,0 +1,54 @@
+.downloadApp__container {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  align-items: center;
+}
+
+.downloadApp__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#downloadApp .cta {
+  justify-content: start;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  /* ============ Download App =========== */
+  #downloadApp {
+    text-align: center;
+  }
+  #downloadApp .cta {
+    flex-direction: column !important;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  /* ============== SUBSCRIBE ============= */
+  .subscribe__container {
+    flex-direction: column;
+    height: auto;
+    gap: 5rem;
+    padding: 3rem;
+    font-size: 1.2rem;
+  }
+
+  .subscribe__container p {
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Donwload */
+  .downloadApp__container {
+    display: block;
+    gap: 0;
+  }
+
+  .download__image .d-img {
+    object-fit: cover !important;
+    object-position: center !important;
+    margin-left: -35%;
+  }
+}
