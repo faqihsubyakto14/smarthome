@@ -42,7 +42,7 @@ export default function Faq() {
             <div className="container faqs__container">
                 {data.map((item, i) => (
                     <article className={selected === i ? "faq open" : "faq"} key={i}>
-                        <span className="faq__icon" onClick={() => toogleOpne(i)}>{selected === i ? <UilPlus /> : <UilMinus />}</span>
+                        <span className="faq__icon" onClick={() => toogleOpne(i)}>{selected === i ? <UilMinus /> : <UilPlus />}</span>
                         <div className="faq__question-answer">
                             <h4 className="faq__question">{item.question}</h4>
                             <p className="faq__answer">
